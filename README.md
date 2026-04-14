@@ -25,16 +25,17 @@ that magically works.
 ## Getting Started
 
 Clone the repo and start with Chapter 0:
-
+``` bash
 git clone https://github.com/Chris1453/bare-metal-stm32.git
 cd bare-metal-stm32/chapter-00-setup
+```
 
 Each chapter folder is self-contained:
-
+``` bash
 cd chapter-01-gpio
 make
 make flash
-
+```
 ## Reference Manuals
 
 - UM1724 — Nucleo-F411RE board user manual
