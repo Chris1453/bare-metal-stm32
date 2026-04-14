@@ -1,0 +1,51 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build",
+      "type": "shell",
+      "command": "make",
+      "args": ["all"],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": ["$gcc"],
+      "options": {
+        "cwd": "${workspaceFolder}",
+        "env": {
+          "PATH": "C:\tools\arm-none-eabi\bin;C:\msys64\usr\bin;${env:PATH}"
+        }
+      }
+    },
+    {
+      "label": "Flash",
+      "type": "shell",
+      "command": "make",
+      "args": ["flash"],
+      "group": "build",
+      "problemMatcher": [],
+      "options": {
+        "cwd": "${workspaceFolder}",
+        "env": {
+          "PATH": "C:\tools\arm-none-eabi\bin;C:\tools\openocd\bin;C:\msys64\usr\bin;${env:PATH}"
+        }
+      },
+      "dependsOn": "Build"
+    },
+    {
+      "label": "Clean",
+      "type": "shell",
+      "command": "make",
+      "args": ["clean"],
+      "group": "build",
+      "problemMatcher": [],
+      "options": {
+        "cwd": "${workspaceFolder}",
+        "env": {
+          "PATH": "C:\msys64\usr\bin;${env:PATH}"
+        }
+      }
+    }
+  ]
+}

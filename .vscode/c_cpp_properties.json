@@ -1,0 +1,27 @@
+{
+  "configurations": [
+    {
+      "name": "STM32F411RE",
+      "includePath": [
+        "${workspaceFolder}/src",
+        "${workspaceFolder}/cmsis",
+        "C:/tools/arm-none-eabi/arm-none-eabi/include",
+        "C:/tools/arm-none-eabi/lib/gcc/arm-none-eabi/15.2.1/include"
+      ],
+      "defines": [
+        "STM32F411xE",
+        "__ARM_ARCH_7EM__"
+      ],
+      "compilerPath": "C:/tools/arm-none-eabi/bin/arm-none-eabi-gcc.exe",
+      "cStandard": "c11",
+      "intelliSenseMode": "gcc-arm",
+      "compilerArgs": [
+        "-mcpu=cortex-m4",
+        "-mthumb",
+        "-mfpu=fpv4-sp-d16",
+        "-mfloat-abi=hard"
+      ]
+    }
+  ],
+  "version": 4
+}
